@@ -27,3 +27,8 @@ mongoose.connect(process.env.MONGO_URI as string)
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
+module.exports = (req: Request, res: Response) => {
+    res.status(200).send('Hello, Vercel!');
+  };
+  
